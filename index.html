@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorite Song Showcase</title>
   </head>
+  <h1>Let's Share Our Favorite Song</h1>
+  <div id="get-Info">
+  <form id="songForm">
+      <div id="songName">
+      <label for="songName">Song Name:</label><br>
+      <input type="text" id="songName" name="songName" required><br>
+      </div>
+      <div id="youtubeLink">
+      <label for="youtubeLink">YouTube Link:</label><br>
+      <input type="text" id="youtubeLink" name="youtubeLink" required><br>
+      </div>
+      <div id="description">
+      <label for="description">Description:</label><br>
+      <textarea id="description" name="description" rows="4" required></textarea><br>
+      </div>
+      <div id="year">
+      <label for="year">Year First Listened:</label><br>
+      <input type="number" id="year" name="year" min="1900" max="2100" required><br>
+      </div> 
+      <button type="submit" onclick="song_info.js">Submit</button>
+  </form>
+</div>
 
+  <div id="displayShow" style="display: none;">
+      <h2>Song Information</h2>
+      <p id="songNameDisplay"></p>
+      <p id="descriptionDisplay"></p>
+      <p id="yearDisplay"></p>
+      <div id="youtubeVideo"></div>
+  </div> 
   <body>
     <script src="index.js"></script>
   </body>
